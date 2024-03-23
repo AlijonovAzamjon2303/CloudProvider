@@ -1,16 +1,16 @@
 ﻿
 namespace CloudProvider.Services
 {
-    internal class DropBox : ICloudStorageProvider
+    internal class DigitalOcean : ICloudStorageProvider
     {
         public string GetFile(string name)
         {
-            return name + "[Dropbox]";
+            return name + "[DigitalOcean]";
         }
 
         public void StoreFile(string name)
         {
-            Console.WriteLine(name + " li fayl saqlandi. [Dropbox]");
+            Console.WriteLine(name + " li fayl saqlandi. [DigitalOcean]");
         }
     }
 }
