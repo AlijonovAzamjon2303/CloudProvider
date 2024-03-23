@@ -1,31 +1,16 @@
 ﻿
 namespace CloudProvider.Services
 {
-    internal class DropBox : ICloudProvider
+    internal class DropBox : ICloudStorageProvider
     {
-        public void CreateServer(string region)
+        public string GetFile(string name)
         {
-            throw new NotImplementedException();
+            return name + "[Dropbox]";
         }
 
-        public string GetCDNAAddress()
+        public void StoreFile(string name)
         {
-            throw new NotImplementedException();
-        }
-
-        public string GetFileName(string name)
-        {
-            return "DropBox Get File Name";
-        }
-
-        public List<string> ListServers(string region)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void StoreProvider(string name)
-        {
-            Console.WriteLine("DropBox Store Provider");
+            Console.WriteLine(name + " li fayl saqlandi. [Dropbox]");
         }
     }
 }
