@@ -25,7 +25,7 @@ namespace CloudProvider.Services
         }
         public List<string> ListServers(string region)
         {
-            throw new NotImplementedException();
+            return new List<string>() {"Uzbekistan", "Tadjikistan", "Kirgizistan"};
         }
 
     }
