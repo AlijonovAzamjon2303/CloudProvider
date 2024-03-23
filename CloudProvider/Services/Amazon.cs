@@ -1,32 +1,32 @@
 ﻿
+
 namespace CloudProvider.Services
 {
-    internal class Amazon : ICloudProvider
+    internal class Amazon : ICloudHostingProvider, ICDNProvider, ICloudStorageProvider
     {
         public void CreateServer(string region)
         {
-            // statement
-            Console.WriteLine("Amazaon, Create Server");
+            Console.WriteLine(region + "da server yaratildi");
         }
 
-        public string GetCDNAAddress()
+        public string GetCDNAddress()
         {
-            return "Amazon Address";
+            return "CDNAddress";
         }
 
-        public string GetFileName(string name)
+        public string GetFile(string name)
         {
-            return "Amazon, File Name";
+            return name + "[Amazon]";
         }
 
+        public void StoreFile(string name)
+        {
+            Console.WriteLine(name + " li fayl saqlandi. [Amazon]");
+        }
         public List<string> ListServers(string region)
         {
-            return new List<string>();
+            throw new NotImplementedException();
         }
 
-        public void StoreProvider(string name)
-        {
-            Console.WriteLine($"{name} Amazon Store Provider");   
-        }
     }
 }
